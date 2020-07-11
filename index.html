@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>m1</title>
+</head>
+  <body>
+      <main>
+        <div class="container">
+          <div class="task1 task">
+
+          Напиши скрипт, который, для объекта user, последовательно: <br>
+          добавляет поле mood со значением 'happy'<br>
+          заменяет значение hobby на 'skydiving'<br>
+          заменяет значение premium на false<br>
+          выводит содержимое объекта user в формате ключ:значение используя Object.keys() и for...of<br>
+
+          const user = {<br>
+          name: 'Mango',<br>
+          age: 20,<br>
+          hobby: 'html',<br>
+          premium: true,<br>
+          };
+          <p class="object"></p>
+          <form action="">
+            <input  class="field" type= "text" name="name"  placeholder="название поля" >
+            <input class="val" type="text" name="name"  placeholder="значения поля" >
+            <button class="task1-go">
+              добавить \ изменить поле
+            </button>
+          </form>
+
+
+
+
+        </div>
+          <div class="task2 task">
+
+            Напиши функцию countProps(obj), считающую кол-во свойств в объекте. <br>
+            Функция возвращает число - количество свойств. <br>
+
+            const user = {<br>
+
+            };
+            <p class="object"></p>
+            <p class="count-property">В объекте нет свойств</p>
+            <form action="">
+              <input  class="field" type= "text" name="name"  placeholder="название поля" >
+              <input class="val" type="text" name="name"  placeholder="значения поля" >
+              <button class="task2-go">
+                добавить \ изменить поле
+              </button>
+              <button class="task2-check">
+                узнать сколько свойств в объекте
+              </button>
+            </form>
+
+
+
+
+          </div>
+          <div class="task3 task">
+            Напиши функцию findBestEmployee(employees), которая принимает объект сотрудников и возвращает имя самого продуктивного (который выполнил больше всех задач). Сотрудники и кол-во выполненых задач содержатся как свойства объекта в формате "имя":"кол-во задач".
+            <br> {<br>
+            ann: 29,<br>
+            david: 35,<br>
+            helen: 1,<br>
+            lorence: 99,<br>
+            lorence3: 99,<br>
+            },<br>
+            // lorence<br>
+
+            <br>
+            {<br>
+            poly: 12,<br>
+            mango: 17,<br>
+            ajax: 4,<br>
+            },<br>
+            // mango<br>
+
+            <br>
+            {<br>
+            lux: 147,<br>
+            david: 21,<br>
+            kiwi: 19,<br>
+            chelsy: 38,<br>
+            },
+            // lux<br>
+            <p class="top">Лучших не найдено</p>
+
+              <button class="task3-go">
+                Показать лучших
+              </button>
+
+
+
+
+
+          </div>
+          <div class="task4 task">
+
+            Напиши функцию countTotalSalary(employees) принимающую объект зарплат. Функция считает общую сумму запрплаты работников и возращает ее. Каждое поле объекта, передаваемого в функцию, имеет вид "имя":"зарплата".
+
+            <br>const countTotalSalary = function(employees) {<br>
+            // твой код<br>
+            };<br>
+
+            /*<br>
+            * Вызовы функции для проверки работоспособности твоей реализации.<br>
+            */<br>
+            console.log(countTotalSalary({})); // 0<br>
+
+            console.log(<br>
+            countTotalSalary({<br>
+            mango: 100,<br>
+            poly: 150,<br>
+            alfred: 80,<br>
+            }),<br>
+            ); // 330<br>
+
+            console.log(<br>
+            countTotalSalary({<br>
+            kiwi: 200,<br>
+            lux: 50,<br>
+            chelsy: 150,<br>
+            }),<br>
+            ); // 400<br>
+            <p class="salary">Общие зарплаты незвестны</p>
+
+            <button class="task4-go">
+              Показать зарплаты команды
+            </button>
+
+
+
+
+
+          </div>
+          <div class="task5 task">
+
+            Напиши функцию getAllPropValues(arr, prop), которая получает массив объектов и имя свойства. Возвращает массив значений определенного свойства prop из каждого объекта в массиве.
+
+            <br> const products = [<br>
+            { name: 'Радар', price: 1300, quantity: 4 },<br>
+            { name: 'Сканер', price: 2700, quantity: 3 },<br>
+            { name: 'Дроид', price: 400, quantity: 7 },<br>
+            { name: 'Захват', price: 1200, quantity: 2 },<br>
+            ];<br>
+
+            const getAllPropValues = function(arr, prop) {<br>
+            // твой код<br>
+            };<br>
+
+            /*<br>
+            * Вызовы функции для проверки работоспособности твоей реализации.<br>
+            */<br>
+            console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']<br>
+
+            console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]<br>
+
+            console.log(getAllPropValues(products, 'category')); // []<br>
+
+            <p class="prop">свойства:</p>
+
+            <button class="task5-go">
+              проверить свойства
+            </button>
+
+
+
+
+
+          </div>
+          <div class="task6 task">
+
+            Напиши функцию calculateTotalPrice(allProdcuts, productName), <br>
+            которая получает массив объектов и имя продукта (значение свойства name). <br>
+            Возвращает общую стоимость продукта (цена * количество).<br>
+
+            Вызовы функции для проверки работоспособности твоей реализации.<br>
+
+            const products = [<br>
+            { name: 'Радар', price: 1300, quantity: 4 },<br>
+            { name: 'Сканер', price: 2700, quantity: 3 },<br>
+            { name: 'Дроид', price: 400, quantity: 7 },<br>
+            { name: 'Захват', price: 1200, quantity: 2 },<br>
+            ];<br>
+
+            const calculateTotalPrice = function(allProdcuts, productName) {<br>
+            // твой код<br>
+            };<br>
+
+            /*
+            * Вызовы функции для проверки работоспособности твоей реализации.<br>
+            */
+            console.log(calculateTotalPrice(products, 'Радар')); // 5200<br>
+
+            console.log(calculateTotalPrice(products, 'Дроид')); // 2800<br>
+
+            <p class="cost">стоимость:</p>
+
+            <button class="task6-go">
+              показать общую стоимость
+            </button>
+
+
+
+
+
+          </div>
+          <div class="task7 task">
+
+
+            Напиши скрипт управления личным кабинетом интернет банка. <br>
+            Есть объект account в котором необходимо реализовать методы для работы с балансом и историей транзакций.<br>
+            /*<br>
+            * Типов транзацкий всего два.<br>
+            * Можно положить либо снять деньги со счета.<br>
+            */<br>
+            const Transaction = {<br>
+            DEPOSIT: 'deposit',<br>
+            WITHDRAW: 'withdraw',<br>
+            };<br>
+            <br>
+            /*<br>
+            * Каждая транзакция это объект со свойствами: id, type и amount<br>
+            */<br>
+            <br>
+            const account = {<br>
+            // Текущий баланс счета<br>
+            balance: 0,<br>
+            <br>
+            // История транзакций<br>
+            transactions: [],<br>
+            <br>
+            /*
+            * Метод создает и возвращает объект транзакции.<br>
+            * Принимает сумму и тип транзакции.<br>
+            */
+            createTransaction(amount, type) {},<br>
+            <br>
+            /*
+            * Метод отвечающий за добавление суммы к балансу.<br>
+            * Принимает сумму танзакции.<br>
+            * Вызывает createTransaction для создания объекта транзакции<br>
+            * после чего добавляет его в историю транзакций<br>
+            */
+            deposit(amount) {},<br>
+            <br>
+            /*
+            * Метод отвечающий за снятие суммы с баланса.<br>
+            * Принимает сумму танзакции.<br>
+            * Вызывает createTransaction для создания объекта транзакции<br>
+            * после чего добавляет его в историю транзакций.<br>
+            *
+            * Если amount больше чем текущий баланс, выводи сообщение<br>
+            * о том, что снятие такой суммы не возможно, недостаточно средств.<br>
+            */<br>
+            withdraw(amount) {},<br>
+            <br>
+            /*<br>
+            * Метод возвращает текущий баланс<br>
+            */<br>
+            getBalance() {},<br><br>
+            <br>
+            /*<br>
+            * Метод ищет и возвращает объект транзации по id<br>
+            */<br>
+            getTransactionDetails(id) {},<br>
+            <br>
+            /*<br>
+            * Метод возвращает количество средств<br>
+            * определенного типа транзакции из всей истории транзакций<br>
+            */<br>
+            getTransactionTotal(type) {},<br>
+            };<br>
+
+            <button class="task7-go">
+              показать управлени аккаунтом в консоль
+            </button>
+
+
+
+
+
+          </div>
+
+        </div>
+      </main>
+      <script type="module" src="js/task-1.js"></script>
+      <script type="module" src="js/task-2.js"></script>
+      <script type="module" src="js/task-3.js"></script>
+      <script type="module" src="js/task-4.js"></script>
+      <script type="module" src="js/task-5.js"></script>
+      <script type="module" src="js/task-6.js"></script>
+      <script type="module" src="js/task-7.js"></script>
+  </body>
+</html>
