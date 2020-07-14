@@ -25,12 +25,11 @@ const account = {
    * Принимает сумму и тип транзакции.
    */
   createTransaction(amount, type) {
-    const objTrans ={
+    return {
       type: type,
       amount: amount,
-      id: this.transactions.length+1,
+      id: this.transactions.length + 1,
     };
-    return objTrans;
   },
 
   /*
@@ -42,7 +41,7 @@ const account = {
   deposit(amount) {
     this.balance += amount;
     this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
-    return this.balance +" deposit";
+    return `${this.balance}  deposit`;
   },
 
   /*
@@ -109,5 +108,6 @@ showCost.addEventListener('click', ()=> {
   console.log(account.getTransactionDetails(3));
   console.log(account.getBalance());
   console.log(account.withdraw(2000000));
+  console.log(account.transactions);
 });
 
