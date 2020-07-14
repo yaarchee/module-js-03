@@ -15,7 +15,7 @@ const products = [
 
 const getAllPropValues = function(arr, prop) {
   // твой код
-  let resArr = [];
+  const resArr = [];
 
   for(const obj of arr){
     if (obj.hasOwnProperty(prop)){
@@ -32,7 +32,7 @@ const getAllPropValues = function(arr, prop) {
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
 
-showProp.addEventListener("click", function () {
+showProp.addEventListener('click', ()=> {
   console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
 
   console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]

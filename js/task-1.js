@@ -14,10 +14,12 @@ const user = {
 
 objectUser.innerHTML = JSON.stringify(user);
 
-addField.addEventListener("click",function () {
+addField.addEventListener('click',()=> {
     event.preventDefault();
 
-    let keys = Object.keys(user);
+    const keys = Object.keys(user);
+
+
     checkField();
 
 
@@ -51,9 +53,9 @@ addField.addEventListener("click",function () {
     }
 
     function addedField(nameField, valField) {
-      if(nameField[0] ==="." || !Number.isNaN(+nameField[0]) || nameField.length===0){
-        alert("Поле не может быть пустым и  начинаться с точки или числа");
-        console.log(nameField +" nameField");
+      if(nameField[0] ==='.' || !Number.isNaN(+nameField[0]) || nameField.length===0){
+        alert('Поле не может быть пустым и  начинаться с точки или числа');
+        console.log(nameField +' nameField');
         return false;
 
       }else{
@@ -65,10 +67,10 @@ addField.addEventListener("click",function () {
     }
 
     function checkFieldBool(valField){
-      if(valField === "true"){
+      if(valField === 'true'){
         return  true;
 
-      }else if(valField === "false"){
+      }else if(valField === 'false'){
         return  false;
 
       }else{

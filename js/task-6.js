@@ -32,7 +32,7 @@ const calculateTotalPrice = function(allProdcuts, productName) {
 
 
 
-showCost.addEventListener("click", function () {
+showCost.addEventListener('click', ()=> {
   console.log(calculateTotalPrice(products, 'Радар')); // 5200
 
   console.log(calculateTotalPrice(products, 'Дроид')); // 2800

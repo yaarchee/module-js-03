@@ -3,11 +3,14 @@
 const top = document.querySelector(".top");
 const showTopEmp = document.querySelector(".task3-go");
 
-let topEmployers = [];
+const topEmployers = [];
+
+
+
 const findBestEmployee = function(employees) {
   // твой код
-  let keys = Object.keys(employees);
-  let values = Object.values(employees);
+  const keys = Object.keys(employees);
+  const values = Object.values(employees);
   let topValue;
   let nameBest;
   let secondValue;
@@ -38,7 +41,7 @@ const findBestEmployee = function(employees) {
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
 
-showTopEmp.addEventListener("click", function () {
+showTopEmp.addEventListener('click', ()=> {
   console.log(
     findBestEmployee({
       ann: 29,
