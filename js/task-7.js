@@ -56,26 +56,26 @@ const account = {
    */
   withdraw(amount) {
     if(amount>this.balance){
-      return "недостаточно средств, ваш баланс "+ this.balance+ " вы снимаете "+ amount;
+      return `недостаточно средств, ваш баланс  ${this.balance} вы снимаете =  ${amount}`;
     }else{
       this.balance -= amount;
       this.transactions.push(this.createTransaction(amount, Transaction.WITHDRAW));
     }
-    return this.balance +" withdraw";
+    return `${this.balance}  withdraw`;
   },
 
   /*
    * Метод возвращает текущий баланс
    */
   getBalance() {
-    return this.balance +" показать баланс";
+    return `${this.balance}  показать баланс`;
   },
 
   /*
    * Метод ищет и возвращает объект транзации по id
    */
   getTransactionDetails(id) {
-    return JSON.stringify(this.transactions.find(item=>item.id===id)) +" getTransactionDetails(id)";
+    return `${JSON.stringify(this.transactions.find(item=>item.id===id))} getTransactionDetails(id)`;
   },
 
   /*
@@ -94,19 +94,19 @@ const account = {
     // for(const transaction of arrTrans){
     //   tempAmount += transaction.amount;
     // }
-    return tempAmount+" getTransactionTotal TYPE " + type;
+    return `${tempAmount} getTransactionTotal TYPE   ${type}`;
   }
 
 };
 
-showCost.addEventListener("click", function () {
+showCost.addEventListener('click', ()=> {
   console.log(account.deposit(1000));
   console.log(account.deposit(2000));
   console.log(account.getBalance());
   console.log(account.getTransactionTotal(Transaction.DEPOSIT));
   console.log(account.withdraw(500));
   console.log(account.getTransactionTotal(Transaction.WITHDRAW));
-  console.log(account.getTransactionDetails(2));
+  console.log(account.getTransactionDetails(3));
   console.log(account.getBalance());
   console.log(account.withdraw(2000000));
 });

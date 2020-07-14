@@ -23,9 +23,9 @@ objectUser.innerHTML = JSON.stringify(user);
 
 let test;
 
-getCountProperty.addEventListener("click", ()=>countProps(user));
+getCountProperty.addEventListener('click', ()=>countProps(user));
 
-addField.addEventListener("click",function () {
+addField.addEventListener("click",()=> {
   event.preventDefault();
 
   checkField();
@@ -60,8 +60,8 @@ addField.addEventListener("click",function () {
   }
 
   function addedField(nameField, valField) {
-    if(nameField[0] ==="." || !Number.isNaN(+nameField[0]) || nameField.length===0){
-      alert("Поле не может быть пустым и  начинаться с точки или числа");
+    if(nameField[0] ==='.' || !Number.isNaN(+nameField[0]) || nameField.length===0){
+      alert('Поле не может быть пустым и  начинаться с точки или числа');
       return false;
 
     }else{
@@ -73,10 +73,10 @@ addField.addEventListener("click",function () {
   }
 
   function checkFieldBool(valField){
-    if(valField === "true"){
+    if(valField === 'true'){
       return  true;
 
-    }else if(valField === "false"){
+    }else if(valField === 'false'){
       return  false;
 
     }else{
@@ -94,9 +94,9 @@ addField.addEventListener("click",function () {
 
 
 
-function countProps(user){
+function countProps(obj){
   event.preventDefault();
-  keys= Object.keys(user);
+  keys= Object.keys(obj);
 
   countProperty.innerHTML = `В объекте ${keys.length} свойств`;
 }

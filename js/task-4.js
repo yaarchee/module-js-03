@@ -2,7 +2,7 @@
 
 const showSalary = document.querySelector(".task4-go");
 const infoSalary = document.querySelector(".salary");
-infoSalary.style.visibility = "hidden";
+infoSalary.style.visibility = 'hidden';
 
 let sumSalary;
 const arrSum = [];
@@ -29,7 +29,7 @@ const countTotalSalary = function(employees) {
 
 
 
-showSalary.addEventListener("click", function () {
+showSalary.addEventListener('click', ()=>{
   console.log(countTotalSalary({})); // 0
 
   console.log(
@@ -48,7 +48,7 @@ showSalary.addEventListener("click", function () {
     }),
   ); // 400
 
-  infoSalary.style.visibility = "visible";
+  infoSalary.style.visibility = 'visible';
   infoSalary.innerHTML = arrSum;
 
 });
