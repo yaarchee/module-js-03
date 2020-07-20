@@ -83,12 +83,9 @@ const account = {
    */
   getTransactionTotal(type) {
 
-
-
-
     let result = this.transactions.reduce((sum, current) =>{
-      if(current.type ===type) return sum + current.amount;
-      return sum;
+      return current.type ===type ? sum + current.amount : sum;
+
     }, 0);
     console.log(typeof  result);
     return result;
@@ -102,7 +99,7 @@ showCost.addEventListener('click', ()=> {
   console.log(account.getBalance() + "   getBalance()");
   console.log(account.getTransactionTotal(Transaction.DEPOSIT));
   console.log(account.withdraw(500));
-  console.log(account.getTransactionTotal(Transaction.WITHDRAW )  + "   &&&&");
+  console.log(account.getTransactionTotal(Transaction.WITHDRAW )  + "WITHDRAW");
   console.log(account.getTransactionDetails(3));
   console.log(account.getBalance());
   console.log(account.withdraw(2000000));
