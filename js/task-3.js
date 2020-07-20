@@ -17,7 +17,7 @@ const findBestEmployee = function(employees) {
   let secondBest;
 
   for (let value = 0; value<=values.length; value++){
-      if (values[value]>=topValue || topValue===undefined){
+      if (values[value]>=topValue || !topValue){
         topValue = values[value];
         nameBest = keys[value];
 
@@ -26,7 +26,7 @@ const findBestEmployee = function(employees) {
   }
 
   for (let value = 0; value<=values.length; value++){
-    if (values[value]===topValue || topValue===undefined){
+    if (values[value]===topValue || !topValue){
       secondValue = values[value];
       secondBest = keys[value];
       topEmployers.push(`Топ работник галеры <span style="background: #1abc9c">${secondBest}</span>, наработал  <span style="background: red">${secondValue}</span>`);

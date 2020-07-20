@@ -82,18 +82,13 @@ const account = {
    * определенного типа транзакции из всей истории транзакций
    */
   getTransactionTotal(type) {
-    //const arrTrans = this.transactions.filter(item=>item.type === type);
-    let tempAmount = 0;
 
-    for(const transaction of this.transactions){
-      if(transaction.type===type){
-        tempAmount += transaction.amount;
-      }
-    }
-    // for(const transaction of arrTrans){
-    //   tempAmount += transaction.amount;
-    // }
-    return `${tempAmount} getTransactionTotal TYPE   ${type}`;
+    let result = this.transactions.reduce((sum, current) =>{
+      return current.type ===type ? sum + current.amount : sum;
+
+    }, 0);
+    console.log(typeof  result);
+    return result;
   }
 
 };
@@ -101,10 +96,10 @@ const account = {
 showCost.addEventListener('click', ()=> {
   console.log(account.deposit(1000));
   console.log(account.deposit(2000));
-  console.log(account.getBalance());
+  console.log(account.getBalance() + "   getBalance()");
   console.log(account.getTransactionTotal(Transaction.DEPOSIT));
   console.log(account.withdraw(500));
-  console.log(account.getTransactionTotal(Transaction.WITHDRAW));
+  console.log(account.getTransactionTotal(Transaction.WITHDRAW )  + "WITHDRAW");
   console.log(account.getTransactionDetails(3));
   console.log(account.getBalance());
   console.log(account.withdraw(2000000));
