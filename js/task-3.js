@@ -19,7 +19,7 @@ const findBestEmployee = function(employees) {
   for( const employer of employeers){
     if(employeers[0][1]===employer[1]){
       console.log(`${employer[0]} ${employer[1]}`);
-      topEmployers.push(`Топ работник галеры <span style="background: #1abc9c">${employer[0]}</span>, наработал  <span style="background: red">${employer[1]}</span>`);
+      topEmployers.push(`Топ работник галеры <span style="background: #1abc9c">${employer[0]}</span>, наработал  <span style="background: red">${employer[1]}</span> <br>`);
     }
   }
 
