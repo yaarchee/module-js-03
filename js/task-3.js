@@ -9,32 +9,22 @@ const topEmployers = [];
 
 const findBestEmployee = function(employees) {
   // твой код
-  const keys = Object.keys(employees);
-  const values = Object.values(employees);
-  let topValue;
-  let nameBest;
-  let secondValue;
-  let secondBest;
+  const employeers = Object.entries(employees);
 
-  for (let value = 0; value<=values.length; value++){
-      if (values[value]>=topValue || !topValue){
-        topValue = values[value];
-        nameBest = keys[value];
+  employeers.sort(function(a, b) {
 
-      }
+    return b[1] - a[1];
+  });
 
-  }
-
-  for (let value = 0; value<=values.length; value++){
-    if (values[value]===topValue || !topValue){
-      secondValue = values[value];
-      secondBest = keys[value];
-      topEmployers.push(`Топ работник галеры <span style="background: #1abc9c">${secondBest}</span>, наработал  <span style="background: red">${secondValue}</span>`);
+  for( const employer of employeers){
+    if(employeers[0][1]===employer[1]){
+      console.log(`${employer[0]} ${employer[1]}`);
+      topEmployers.push(`Топ работник галеры <span style="background: #1abc9c">${employer[0]}</span>, наработал  <span style="background: red">${employer[1]}</span> <br>`);
     }
-
   }
 
-  return topValue+" "+nameBest;
+
+
 };
 
 /*
