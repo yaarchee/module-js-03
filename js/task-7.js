@@ -99,7 +99,7 @@ showCost.addEventListener('click', ()=> {
   console.log(account.getBalance() + "   getBalance()");
   console.log(account.getTransactionTotal(Transaction.DEPOSIT));
   console.log(account.withdraw(500));
-  console.log(account.getTransactionTotal(Transaction.WITHDRAW )  + " WITHDRAW");
+  console.log(account.getTransactionTotal(Transaction.WITHDRAW )  + " getTransactionTotal");
   console.log(account.getTransactionDetails(3));
   console.log(account.getBalance());
   console.log(account.withdraw(2000000));
