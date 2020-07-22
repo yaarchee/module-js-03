@@ -23,13 +23,11 @@
           premium: true,<br>
           };
           <p class="object"></p>
-          <form action="">
-            <input  class="field" type= "text" name="name"  placeholder="название поля" >
-            <input class="val" type="text" name="name"  placeholder="значения поля" >
+
             <button class="task1-go">
               добавить \ изменить поле
             </button>
-          </form>
+
 
 
 
@@ -37,24 +35,26 @@
         </div>
           <div class="task2 task">
 
-            Напиши функцию countProps(obj), считающую кол-во свойств в объекте. <br>
-            Функция возвращает число - количество свойств. <br>
+            Напиши функцию countProps(obj), считающую кол-во свойств в объекте. Функция возвращает число - количество свойств.
 
-            const user = {<br>
+            const countProps = function(obj) { <br>
+            // твой код<br>
+            };<br>
 
-            };
-            <p class="object"></p>
-            <p class="count-property">В объекте нет свойств</p>
-            <form action="">
-              <input  class="field" type= "text" name="name"  placeholder="название поля" >
-              <input class="val" type="text" name="name"  placeholder="значения поля" >
-              <button class="task2-go">
-                добавить \ изменить поле
-              </button>
+            /*<br>
+            * Вызовы функции для проверки работоспособности твоей реализации.<br>
+            */<br>
+            console.log(countProps({})); // 0<br>
+
+            console.log(countProps({ name: 'Mango', age: 2 })); // 2<br>
+
+            console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3<br>
+
+
               <button class="task2-check">
                 узнать сколько свойств в объекте
               </button>
-            </form>
+
 
 
 

@@ -3,25 +3,32 @@
 const top = document.querySelector(".top");
 const showTopEmp = document.querySelector(".task3-go");
 
-const topEmployers = [];
 
+const topEmployers = [];
+let tempTopEmployers = [];
 
 
 const findBestEmployee = function(employees) {
-  // твой код
+
+  let topValues = 0;
   const employeers = Object.entries(employees);
 
-  employeers.sort(function(a, b) {
 
-    return b[1] - a[1];
-  });
 
-  for( const employer of employeers){
-    if(employeers[0][1]===employer[1]){
-      console.log(`${employer[0]} ${employer[1]}`);
-      topEmployers.push(`Топ работник галеры <span style="background: #1abc9c">${employer[0]}</span>, наработал  <span style="background: red">${employer[1]}</span> <br>`);
+  for(const emp of employeers){
+
+    if(topValues<emp[1]){
+      topValues = emp[1];
+      tempTopEmployers = [];
+      tempTopEmployers.push(`${emp[0]}: ${emp[1]} `);
+    }else if(topValues === emp[1]){
+
+      tempTopEmployers.push(`${emp[0]}: ${emp[1]} `);
     }
   }
+  topEmployers.push(tempTopEmployers);
+  return tempTopEmployers;
+
 
 
 
