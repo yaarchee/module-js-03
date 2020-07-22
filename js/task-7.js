@@ -41,7 +41,7 @@ const account = {
   deposit(amount) {
     this.balance += amount;
     this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
-    return `${this.balance}  deposit`;
+    return `${amount}  deposit`;
   },
 
   /*
@@ -60,7 +60,7 @@ const account = {
       this.balance -= amount;
       this.transactions.push(this.createTransaction(amount, Transaction.WITHDRAW));
     }
-    return `${this.balance}  withdraw`;
+    return `${amount}  withdraw`;
   },
 
   /*

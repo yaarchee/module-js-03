@@ -13,9 +13,9 @@ const products = [
 
 ];
 
-const calculateTotalPrice = function(allProdcuts, productName) {
+const calculateTotalPrice = (allProducts, productName)=> {
   let result = 0;
-  for(const obj of allProdcuts){
+  for(const obj of allProducts){
     if(obj.name === productName){
       result += obj.price*obj.quantity;
     }

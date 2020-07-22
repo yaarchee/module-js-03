@@ -9,13 +9,12 @@ const arrSum = [];
 
 
 
-const countTotalSalary = function(employees) {
+const countTotalSalary = (employees)=> {
   // твой код
   sumSalary = 0;
-  const salaries = Object.values(employees);
 
-  for(const salary of salaries){
-    sumSalary += salary;
+  for(const salary of Object.keys(employees)){
+    sumSalary += employees[salary];
   }
 
   arrSum.push(sumSalary);
